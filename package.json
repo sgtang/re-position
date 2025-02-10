@@ -11,7 +11,8 @@
       "build-docs": "docz build",
       "build-lib": "tsc",
       "dev": "docz dev",
-      "test": "jest"
+      "test": "jest",
+      "prepare": "npm run build-lib"
     },
     "repository": "https://github.com/sgtang/re-position",
     "author": "Susan Tang",
