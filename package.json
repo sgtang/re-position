@@ -7,7 +7,7 @@
       "lib"
     ],
     "scripts": {
-      "build": "rimraf lib && npm run build-lib && npm run build-docs",
+      "build": "npm run build-lib",
       "build-docs": "docz build",
       "build-lib": "tsc",
       "dev": "docz dev",

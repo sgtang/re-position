@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import * as React from 'react';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -27,6 +28,8 @@ export interface PositionableProps {
      * precedence over `movable`, `resizable`, and `rotatable`.
      */
     disabled?: boolean;
+    children?: (props: any) => React.ReactNode;
+      
 
     /**
      * By default, if `movable` is `true`, both mouse and keyboard movement

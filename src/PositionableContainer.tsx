@@ -1,4 +1,5 @@
 import * as React from 'react';
+import type { JSX } from "react";
 
 import { Positionable } from './Positionable';
 import TransformBox from './TransformBox';
@@ -12,6 +13,7 @@ export interface PositionableContainerProps {
      * precedence over `movable`, `resizable`, and `rotatable`.
      */
     disabled?: boolean;
+    children?: React.ReactNode;
 
     /** Component or HTML element to use for the container. */
     Element?: React.ComponentType<any>;
@@ -75,7 +77,7 @@ export interface PositionableContainerProps {
     style?: React.CSSProperties;
 }
 
-export const PositionableContainer: React.SFC<PositionableContainerProps> = ({
+export const PositionableContainer: React.FC<PositionableContainerProps> = ({
     children,
     disabled,
     disableKeyboardMovement,
